@@ -1,11 +1,15 @@
-const db = firebaseApp.firestore();
-const auth = firebaseApp.auth();
+// const db = firebaseApp.firestore();
+// const auth = firebaseApp.auth();
+
+import {getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+
+const auth = getAuth();
 
 const register = () => {
     const email = document.getElementById('email').value
     const password = document.getElementById('password').value
 
-    auth.createUserWithEmailAndPassword(email, password)
+    createUserWithEmailAndPassword(auth, email, password)
     .then((res) => {
         console.log(res.user)
     })
@@ -15,3 +19,5 @@ const register = () => {
         console.log(err.message)
     })
 }
+
+export default register;
