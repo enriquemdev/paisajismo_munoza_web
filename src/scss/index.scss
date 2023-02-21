@@ -16,6 +16,8 @@ Color setup
     --p2: #A6BB8D;
     --p3: #61876E;
     --p4: #3C6255;
+
+    --text1: #404040;
 }
 
 * {
@@ -73,18 +75,35 @@ Setup components
 Navbar
 ---------------------------------------------------------------*/
 
-.navbar .btn-outline-secondary {
-    border: 1px solid var(--gray-2);
-    color: var(--black);
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    padding: 10px 16px;
-}
+/*1- VERSION CSS*/
+// .navbar .btn-outline-secondary {
+//     border: 1px solid var(--gray-2);
+//     color: var(--black);
+//     font-size: 14px;
+//     font-weight: 500;
+//     line-height: 20px;
+//     padding: 10px 16px;
+// }
 
+// .navbar {
+//     padding: 12px 0;
+//     background-color: var(--p4);
+// }
+
+/*1- VERSION SASS*/
 .navbar {
     padding: 12px 0;
     background-color: var(--p4);
+
+    // No hace nada, porque no hay ningun elemento con la clase dentro del navbar
+    .btn-outline-secondary {
+        border: 1px solid var(--gray-2);
+        color: var(--black);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        padding: 10px 16px;
+    }
 }
 
 .nav-link {
@@ -112,16 +131,31 @@ Navbar
 /* ------------------------------------------------------------ 
 Hero setion
 ---------------------------------------------------------------*/
+
+/*2- VERSION CSS*/
+// section.hero {
+//     padding: 70px 0;
+// }
+
+// section.hero .text {
+//     font-weight: 800;
+//     font-size: 48px;
+//     line-height: 73px;
+//     color: var(--black);
+//     /* text-align: center; */
+// }
+
+/*2- VERSION SASS*/
 section.hero {
     padding: 70px 0;
-}
 
-section.hero .text {
-    font-weight: 800;
-    font-size: 48px;
-    line-height: 73px;
-    color: var(--black);
-    /* text-align: center; */
+    .text {
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 73px;
+        color: var(--black);
+        /* text-align: center; */
+    }
 }
 
 h1 {
@@ -160,10 +194,10 @@ section.setup .text-header h3 {
 }
 
 section.setup .text-header p {
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 22px;
+    font-weight: 500;
     line-height: 28px;
-    color: var(--gray-1);
+    color: var(--text1);
     padding: 27px 0;
 }
 
@@ -176,14 +210,14 @@ section.setup h5 {
     font-size: 18px;
     line-height: 24px;
     color: var(--black);
-    padding-bottom: 18px;
+    padding-bottom: 16px;
 }
 
 section.setup .desc p {
-    font-weight: 400;
-    font-size: 13px;
+    font-weight: 500;
+    font-size: 16px;
     line-height: 22px;
-    color: var(--gray-1);
+    color: var(--text1);
     max-width: 284px;
     margin: 0 auto;
 }
