@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
   },
@@ -17,10 +19,11 @@
   "bugs": {
     "url": "https://github.com/enriquemdev/paisajismo_munoza_web/issues"
   },
-  "homepage": "https://github.com/enriquemdev/paisajismo_munoza_web#readme",
+  "homepage": "http://enriquemdev.github.io/paisajismo_munoza_web",
   "devDependencies": {
     "autoprefixer": "^10.4.13",
     "css-loader": "^6.7.3",
+    "gh-pages": "^5.0.0",
     "postcss-loader": "^7.0.2",
     "sass": "^1.58.0",
     "sass-loader": "^13.2.0",
