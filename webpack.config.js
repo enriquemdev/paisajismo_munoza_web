@@ -33,6 +33,24 @@ module.exports = {
             loader: 'sass-loader'
           }
         ]
+      },
+      {
+          test: /\.(jpg|jpeg|gif|png)$/,
+          exclude: /node_modules/,
+          loader:'url-loader',
+          options: {
+            'limit':'1024',
+            'name':'assets/img/[name].[ext]'
+          }
+      },
+      {
+          test: /\.(woff|woff2|eot|ttf|svg)$/,
+          exclude: /node_modules/,
+          loader: 'url-loader',
+          options: {
+            'limit':'1024',
+            'name':'assets/fonts/[name].[ext]'
+          }
       }
     ]
   }
