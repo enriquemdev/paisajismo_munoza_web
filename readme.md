@@ -32,3 +32,8 @@ Found a kinda solution to output them in a specific folder but now it outputs in
 4- Actual webpack 5(Says previous way is deprecated but still valid): https://webpack.js.org/guides/asset-modules
 
 Changed the webpack.config.js file in order to work. But it shouldn´t output on docs folder directly
+(Remember it could work by just using the cdn or even just using the plain css code that was npm installed)
+//Made a change on the output file of webpack so it creates a folder called "webpack_output" that stores 
+bundle.js and the compiled fonts.
+
+Github pages and firebase parts are missing.

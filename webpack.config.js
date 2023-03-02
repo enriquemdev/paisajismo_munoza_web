@@ -1,11 +1,31 @@
 const path = require('path')
 
+// ,
+//       {
+//           test: /\.(jpg|jpeg|gif|png)$/,
+//           exclude: /node_modules/,
+//           loader:'url-loader',
+//           options: {
+//             'limit':'1024',
+//             'name':'assets/img/[name].[ext]'
+//           }
+//       },
+//       {
+//           test: /\.(woff|woff2|eot|ttf|svg)$/,
+//           exclude: /node_modules/,
+//           loader: 'url-loader',
+//           options: {
+//             'limit':'1024',
+//             'name':'assets/fonts/[name].[ext]'
+//           }
+//       }
+
 module.exports = {
   mode: 'development',
   entry: './src/js/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'docs')//dist before
+    path: path.resolve(__dirname, 'docs/webpack_output')//dist before
   },
   watch: true,
   module: {
@@ -33,24 +53,6 @@ module.exports = {
             loader: 'sass-loader'
           }
         ]
-      },
-      {
-          test: /\.(jpg|jpeg|gif|png)$/,
-          exclude: /node_modules/,
-          loader:'url-loader',
-          options: {
-            'limit':'1024',
-            'name':'assets/img/[name].[ext]'
-          }
-      },
-      {
-          test: /\.(woff|woff2|eot|ttf|svg)$/,
-          exclude: /node_modules/,
-          loader: 'url-loader',
-          options: {
-            'limit':'1024',
-            'name':'assets/fonts/[name].[ext]'
-          }
       }
     ]
   }
