@@ -5,18 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Paisajismo Muñoza</title>
 
+    <!-- Font awesome CDN, just in case -->
+    <!-- <script src="https://kit.fontawesome.com/d629b047b5.js" crossorigin="anonymous"></script> -->
     
+    <!-- Going to use the cdn as i cant access node_modules on -->
+    <!-- <link href="../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css" rel="stylesheet">
+    <link href="../node_modules/@fortawesome/fontawesome-free/css/brands.css" rel="stylesheet">
+    <link href="../node_modules/@fortawesome/fontawesome-free/css/solid.css" rel="stylesheet"> -->
+
+    <!-- Before using webpack -->
     <!-- <link href="../src/css/bootstrap/bootstrap.min.css" rel="stylesheet"> -->
     <!-- <link href="../src/css/index.css" rel="stylesheet"> -->
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> -->
   </head>
+
   <body>
     <!-- Navbar section -->
     <nav class="navbar navbar-expand-sm">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <!-- Brand here -->
+                <!-- <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-user"></i> -->
                 <img src="assets/img/logo.jpg" alt="brand" class="logoImage">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -69,15 +80,17 @@
     <section class="setup">
         <div class="container">
             <div class="text-header text-center">
-                <h3>¡Estamos para ayudarte!</h3>
+                <h2>¡Estamos para ayudarte!</h2>
                 <p>Obtén el escenario natural que tanto deseas a través de nuestra oferta integral de servicios de jardinería.</p>
             </div>
             <div class="items text-center">
                 <div class="row">
 
                     <div class="col-md-4">
-                        <div class="icons">
-                            <img src="assets/img/icons/icons-1.svg" alt="icons">
+                        <div class="icon">
+                            <div class="icon-background">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
                         </div>
                         <div class="desc">
                             <!-- <h5>Diseño de Jardines</h5>
@@ -92,8 +105,10 @@
                     </div>
 
                     <div class="col-md-4">
-                        <div class="icons">
-                            <img src="assets/img/icons/think.svg" alt="icons">
+                        <div class="icon">
+                            <div class="icon-background">
+                                <i class="fa-solid fa-circle-info"></i>
+                            </div>
                         </div>
                         <div class="desc">
                             <h5>Bríndanos Información</h5>
@@ -102,8 +117,10 @@
                     </div>
 
                     <div class="col-md-4">
-                        <div class="icons">
-                            <img src="assets/img/icons/location.svg" alt="icons">
+                        <div class="icon">
+                            <div class="icon-background">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
                         </div>
                         <div class="desc">
                             <h5>Visítanos</h5>
@@ -116,8 +133,101 @@
         </div>
     </section>
 
+    <!-- Services section -->
+    <section class="services">
+        <div class="container">
+            
+            <!-- <div class="row"> -->
+                <h2>Nuestros Servicios</h2>
+            <!-- </div> -->
 
-    <form class="main signup">
+            <div class="row">
+                <div class="col-md-7 serviceImageContainer1">
+                    <img src="./assets/img/index/diseñoJardines2.jpg" alt="">
+                </div>
+                <div class="col-md-5 servicesTextContainer">
+                    <div class="servicesText">
+                        <h4>
+                            Diseño de Jardínes
+                        </h4>
+                        <p>
+                            Trabajamos desde cero la planificación, selección y diseño arquitectónico paisajista ideal, basandonos en las
+                            necesidades de nuestros clientes, las normas ambientales y las mejores prácticas para lograr un escenario funcional y 
+                            agradable para las personas y el ambiente natural.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">       
+                <div class="col-md-5 servicesTextContainer">
+                    <div class="servicesText">
+                        <h4>
+                            Mantenimiento de Jardínes
+                        </h4>
+                        <p>
+                            Realizamos todos los tipos de mantenimiento (preventivo, correctivo, adaptativo), ya sea en un area general 
+                            o específica, en cualquier ambiente natural con el fin de preservar el paisaje sano y vistoso, de manera que
+                            las personas que visiten tus espacios se sientan siempre cómodas y satisfechas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-7 serviceImageContainer2">
+                    <img src="./assets/img/index/mantenimientoJardines3.webp" alt="">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-7 serviceImageContainer1">
+                    <img src="./assets/img/index/vivero.jpg" alt="">
+                </div>
+                <div class="col-md-5 servicesTextContainer">
+                    <div class="servicesText">
+                        <h4>
+                            Vivero
+                        </h4>
+                        <p>
+                            Contamos con instalaciones agronómicas en la cual nos enargamos de plantar, germinar y cuidar una diversidad
+                            de plantas con la que puedes ver muestras e incluso adquiriras para disponerlas en tus espacios naturales para que 
+                            formen parte de la armonía natural del paisaje deseado.
+                        </p>
+                    </div>
+                </div>
+            </div>  
+
+        </div>
+    </section>
+
+
+        <!-- Footer -->
+        <footer class="text-center text-white footer">
+          <!-- Grid container -->
+          <div class="container p-4 pb-0">
+            <!-- Section: CTA -->
+            <section class="">
+              <p class="d-flex justify-content-center align-items-center">
+                <span class="me-3">¡Mándanos un mensaje!</span>
+                <button type="button" class="btn btn-outline-light btn-rounded">
+                  Aquí
+                </button>
+              </p>
+            </section>
+            <!-- Section: CTA -->
+          </div>
+          <!-- Grid container -->
+      
+          <!-- Copyright -->
+          <div class="text-center p-3 footer-down">
+            © 2023 Copyright:
+            <a class="text-white" href="#">Paisajismo Munoza</a>
+          </div>
+          <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+
+
+    <!-- <form class="main signup">
         <div>
             <label>Email</label>
             <input name="email" placeholder="Email" id="email" type="email" />
@@ -130,12 +240,14 @@
         <button 
         class="submit-btn"
         type="submit"
-        >Sign Up</button>
+        >Sign Up</button> -->
+
         <!-- <button 
         class="login-btn"
         onclick="login()"
-        >Sign In</button> -->
-    </form>
+        >Sign In</button>-->
+        
+    <!-- </form> -->
 
 
     <!-- <script src="../src/js/bootstrap/bootstrap.bundle.min.js"></script> -->
@@ -160,6 +272,6 @@
 
     <script src="../src/js/firebase/auth.js"></script> -->
 
-    <script src="bundle.js"></script>
+    <script src="./webpack_output/bundle.js"></script>
   </body>
 </html>

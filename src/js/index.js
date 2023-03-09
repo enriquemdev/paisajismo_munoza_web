@@ -2,7 +2,7 @@
 import '../scss/styles.scss'
 
 // Import all of Bootstrap's JS
-import * as bootstrap from 'bootstrap'
+// import * as bootstrap from 'bootstrap'
 
 ////////////////////////////////////  Firebase stuff  /////////////////////////////////////////////////////
 //config oject for the firebase project
